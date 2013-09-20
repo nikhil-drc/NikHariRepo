@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('MyAppApp', [])
+angular.module('MyAppApp', ["LocalStorageModule"])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

@@ -3,8 +3,20 @@
   
   <hr/>
   
-  <p data-ng-repeat="todo in todos">
-      {{todo}}
-  </p>
+
+      <p data-ng-repeat="todo in todos">
+          <input type="text" data-ng-model="todo" />
+          <a class="btn"
+              data-ng-click="removeTodo($index)"
+          >x</a>
+      </p>
+
+  <hr/>
   
+  <form data-ng-submit="addTodo()">
+      <div class="controls form-inline">
+          <input type="text" data-ng-model="todo" size="20" />
+          <input type="submit" class="btn btn-primary" value="Add" />
+      </div>
+  </form>
 </div>
